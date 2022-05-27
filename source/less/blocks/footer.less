@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  &__text {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+  &__development {
+    position: relative;
+    padding-right: 20px;
+    &:after {
+      position: absolute;
+      right: -17px;
+      top: -6px;
+      content: "";
+      width: 27px;
+      height: 35px;
+      background-image: url("../../img/icon/htmlacademy.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+}

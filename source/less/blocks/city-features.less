@@ -1,0 +1,23 @@
+.city-features {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    text-align: center;
+    &:nth-child(n) {
+      background-color: @blue;
+      color: @white;
+    }
+    &:nth-child(n+3) {
+      background-color: @lightgrey;
+      color: @black;
+    }
+  }
+  &__point-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
