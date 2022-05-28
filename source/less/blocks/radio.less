@@ -1,0 +1,41 @@
+.radio {
+  margin-bottom: 54px;
+  &__label {
+    margin-left: 75px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+  }
+  &__input {
+    position: absolute;
+    appearance: none;
+  }
+  &__box {
+    margin-left: -75px;
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    background-color: @grey;
+    border-radius: 50%;
+    &:hover {
+      background-color: @grey-hover;
+    }
+    &:active {
+      background-color: @grey-active;
+    }
+  }
+}
+// checked
+.radio__input:checked + .radio__box{
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: @black;
+  transform: translateX(17px);
+}
+
+.radio__input:active:checked + .radio__box{
+  opacity: 0.3;
+}

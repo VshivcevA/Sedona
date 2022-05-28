@@ -10,18 +10,32 @@
     text-transform: uppercase;
   }
   &__development {
-    position: relative;
-    padding-right: 20px;
-    &:after {
-      position: absolute;
-      right: -17px;
-      top: -6px;
-      content: "";
-      width: 27px;
-      height: 35px;
-      background-image: url("../../img/icon/htmlacademy.svg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
+    display: flex;
+    &--text {
+      margin-right: 13px;
     }
+    &--icon {
+      margin-top: 10px;
+      &:hover path{
+        fill: @blue;
+      }
+      &:active path{
+        fill: @black;
+        opacity: 30%;
+      }
+    }
+  //  position: relative;
+  //  padding-right: 20px;
+  //  //&:after {
+  //  //  position: absolute;
+  //  //  right: -17px;
+  //  //  top: -6px;
+  //  //  content: "";
+  //  //  width: 27px;
+  //  //  height: 35px;
+  //  //  background-image: url("../../img/icon/htmlacademy.svg");
+  //  //  background-repeat: no-repeat;
+  //  //  background-position: 0 0;
+  //  //}
   }
 }

@@ -1,0 +1,42 @@
+.fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    justify-content: center;
+  }
+  &__textarea {
+    //background-color: @grey;
+    //border: none;
+    padding-top: 13px;
+    //width: 100%;
+    min-height: 160px;
+  }
+  &__label--person,
+  &__label--contact {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  &__textarea,
+  &__input--person,
+  &__input--contact {
+    background-color: @grey;
+    border: none;
+    height: 58px;
+    width: 100%;
+    padding-left: 22px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    box-sizing: border-box;
+  }
+}

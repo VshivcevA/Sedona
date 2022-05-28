@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: {{projectTitle}}</title>
-  </head>
-  <body class="page__body">
-    <header class="header">
-      <a class="header__logo" href="">
-        <img alt="Логотои" src="img/svg/logotype-mobile.svg"></a>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="" >Главная</a></li>
-          <li class="nav__item"><a class="nav__link" href="" >Фото и видео</a></li>
-          <li class="nav__item"><a class="nav__link" href="" >Форма Отзыва</a></li>
-          <li class="nav__item"><a class="nav__link" href="" >HTML ACADEMY</a></li>
-        </ul>
-        <button class="nav__toggle"><span>Меню</span></button>
-      </nav>
-      <div class="intro">
-        <img class="intro__item" alt="Седона" src="img/svg/intro-sedona.svg">
-      </div>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: {{projectTitle}}</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="page__body">
+<header class="header">
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item button"><a class="nav__link" href="index.html" >Главная</a></li>
+      <li class="nav__item button"><a class="nav__link" href="catalog.html" >Фото и видео</a></li>
+      <li class="nav__item button"><a class="nav__link" href="form.html" >Форма Отзыва</a></li>
+      <li class="nav__item button"><a class="nav__link" href="" >HTML ACADEMY</a></li>
+    </ul>
+    <button class="nav__close"><span>Закрыть меню</span></button>
+  </nav>
+  <div class="header__container">
+    <button class="header__toggle"><span>Меню</span></button>
+    <a class="header__logo" href="">
+      <img alt="" src="img/svg/logotype-mobile.svg">
+    </a>
+  </div>
+  <div class="intro">
+    <img class="intro__container" src="img/jpg/intro-content.svg" alt="">
+    <!--        <div class="intro__container">-->
+    <!--          <img class="intro__item" alt="" src="img/svg/intro-welcome.svg">-->
+    <!--          <img class="intro__item" alt="" src="img/svg/intro-gordeous.svg">-->
+    <!--          <img class="intro__item" alt="" src="img/svg/intro-sedona.svg">-->
+    <!--          <img class="intro__item" alt="" src="img/svg/intro-becouse.svg">-->
+    <!--        </div>-->
+  </div>
+</header>
 
-    <main class="page-main">
+    <main class="main page-main">
       <h1 class="visually-hidden">Sedona - туристический сайт. Страница каталога</h1>
       <div class="page-title">
         <h2 class="page-title__title">Фото и видео</h2>
@@ -31,7 +43,7 @@
       <section class="photo">
         <ul class="photo__list">
           <li class="photo__item photo-card">
-            <img src="img/jpg/photo-road.jpg" alt="Дорога на закате">]
+            <img src="img/jpg/photo-road.jpg" alt="Дорога на закате">
             <div class="photo-card__item">
               <h3 class="photo-card__title">Неродные просторы</h3>
               <p class="photo-card__text">Автор фото: Борис</p>
@@ -39,7 +51,7 @@
             </div>
           </li>
           <li class="photo__item photo-card">
-            <img src="img/jpg/photo-fauna.jpg" alt="Фауна Седоны">]
+            <img src="img/jpg/photo-fauna.jpg" alt="Фауна Седоны">
             <div class="photo-card__item">
               <h3 class="photo-card__title">Местная растительность</h3>
               <p class="photo-card__text">Автор фото: Сергей</p>
@@ -47,7 +59,7 @@
             </div>
           </li>
           <li class="photo__item photo-card">
-            <img src="img/jpg/photo-road.jpg" alt="Дорога на север">]
+            <img src="img/jpg/photo-road.jpg" alt="Дорога на север">
             <div class="photo-card__item">
               <h3 class="photo-card__title">Дорога на север</h3>
               <p class="photo-card__text">Автор фото: Петр</p>
@@ -55,7 +67,7 @@
             </div>
           </li>
           <li class="photo__item photo-card">
-            <img src="img/jpg/photo-road.jpg" alt="Мост дьявола">]
+            <img src="img/jpg/photo-road.jpg" alt="Мост дьявола">
             <div class="photo-card__item">
               <h3 class="photo-card__title">Мост дьявола</h3>
               <p class="photo-card__text">Автор фото: Антон</p>
