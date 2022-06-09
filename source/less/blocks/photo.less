@@ -2,10 +2,18 @@
   &__list {
     padding: 0;
     list-style: none;
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: @desktop-width) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
-  &__title {
-    //font-weight: 700;
-    //font-size: 14px;
-    //line-height: 24px;
+  &__item {
+    &:first-child {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
   }
 }

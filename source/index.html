@@ -9,28 +9,30 @@
   <body class="page__body">
     <header class="header">
       <nav class="nav">
-        <ul class="nav__list">
+        <ul class="nav__list nav--opened">
           <li class="nav__item button"><a class="nav__link" href="index.html" >Главная</a></li>
           <li class="nav__item button"><a class="nav__link" href="catalog.html" >Фото и видео</a></li>
           <li class="nav__item button"><a class="nav__link" href="form.html" >Форма Отзыва</a></li>
           <li class="nav__item button"><a class="nav__link" href="" >HTML ACADEMY</a></li>
         </ul>
-        <button class="nav__close"><span>Закрыть меню</span></button>
-      </nav>
-      <div class="header__container">
-        <button class="header__toggle"><span>Меню</span></button>
+        <a class="nav__bottom--close">
+          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z" fill="white"/>
+          </svg>
+        </a>
         <a class="header__logo" href="">
           <img alt="" src="img/svg/logotype-mobile.svg">
         </a>
-      </div>
+        <a class="header__bottom--toggle">
+          <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2"/>
+            <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2"/>
+            <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2"/>
+          </svg>
+        </a>
+      </nav>
       <div class="intro">
-        <img class="intro__container" src="img/jpg/intro-content.svg" alt="">
-<!--        <div class="intro__container">-->
-<!--          <img class="intro__item" alt="" src="img/svg/intro-welcome.svg">-->
-<!--          <img class="intro__item" alt="" src="img/svg/intro-gordeous.svg">-->
-<!--          <img class="intro__item" alt="" src="img/svg/intro-sedona.svg">-->
-<!--          <img class="intro__item" alt="" src="img/svg/intro-becouse.svg">-->
-<!--        </div>-->
+        <img class="intro__container" src="img/jpg/intro-content.svg" width="282px" alt="">
       </div>
     </header>
 
@@ -40,60 +42,71 @@
         <p class="page-title__title">СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего!</p>
         <p class="page-title__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p></div>
       <h2 class="visually-hidden">Наши преимушества</h2>
+
       <section class="city-features">
         <ul class="city-features__list">
           <li class="city-features__item">
-            <div class="city-features__item-block city-features__point">
+            <div class="city-features__item-text city-features__point">
               <h3 class="city-features__point-title">НАСТОЯЩИЙ ГОРОДОК</h3>
               <p class="city-features__point-number">— №1 —</p>
-              <p class="city-features__point-text">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p></div>
-            <img class="city-features__item-img" alt="" src="img/jpg/photo-city.jpg">
+              <p class="city-features__point-text">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+            </div>
+            <img class="city-features__item-img" alt="" src="img/jpg/photo-city.jpg" width="320px" height="260">
             <div class="features-advantage">
-              <dl class="features-advantage__list">
-                <dt class="features-advantage__title">Жилье</dt>
-                <dd class="features-advantage__item">Рекомендуем пожить в настоящем мотеле, все как в кино!</dd>
-                <dt class="features-advantage__title">СУВЕНИРЫ</dt>
-                <dd class="features-advantage__item">Не только китайского, но и местного производства!</dd>
-                <dt class="features-advantage__title">ЕДА</dt>
-                <dd class="features-advantage__item">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</dd>
-              </dl>
+              <ul class="features-advantage__list">
+                <li class="features-advantage__item">
+                  <dt class="features-advantage__title">Жилье</dt>
+                  <dd class="features-advantage__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</dd>
+                </li>
+                <li class="features-advantage__item">
+                  <dt class="features-advantage__title">СУВЕНИРЫ</dt>
+                  <dd class="features-advantage__text">Не только китайского, но и местного производства!</dd>
+                </li>
+                <li class="features-advantage__item">
+                  <dt class="features-advantage__title">ЕДА</dt>
+                  <dd class="features-advantage__text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</dd>
+                </li>
+              </ul>
             </div>
           </li>
           <li class="city-features__item">
             <div class="city-features__item-text city-features__point">
               <h3 class="city-features__point-title">ТАМ ЕСТЬ Мост дьявола</h3>
               <p class="city-features__point-number">— №2 —</p>
-              <p class="city-features__point-text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p></div>
+              <p class="city-features__point-text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+            </div>
             <img class="city-features__item-img" alt="" src="img/jpg/photo-bridge.jpg">
           </li>
           <li class="city-features__item">
             <div class="city-features__item-text city-features__point">
               <h3 class="city-features__point-title">НЕБОЛЬШАЯ ПЛОЩАДь</h3>
               <p class="city-features__point-number">— №3 —</p>
-              <p class="city-features__point-text">ВСЕ интересные места находятся очень близко</p></div>
+              <p class="city-features__point-text">ВСЕ интересные места находятся очень близко</p>
+            </div>
           </li>
           <li class="city-features__item">
             <div class="city-features__item-text city-features__point">
               <h3 class="city-features__point-title">КРАСИВАЯ ДОРОГА</h3>
               <p class="city-features__point-number">— №4 —</p>
-              <p class="city-features__point-text">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p></div>
+              <p class="city-features__point-text">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+            </div>
           </li>
           <li class="city-features__item">
             <div class="city-features__item-text city-features__point">
               <h3 class="city-features__point-title">МАЛО ТУРИСТОВ</h3>
               <p class="city-features__point-number">— №5 —</p>
-              <p class="city-features__point-text">Большинство едет в гранд каньони толпится там</p></div>
+              <p class="city-features__point-text">Большинство едет в гранд каньони толпится там</p>
+            </div>
           </li>
         </ul>
       </section>
       <section class="page-title">
-        <p class="page-title__title">ЗАИНТЕРЕСОВАЛИСЬ?</p>
-        <p class="page-title__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <p class="page-title__title page-title__title--search">ЗАИНТЕРЕСОВАЛИСЬ?</p>
+        <p class="page-title__text--search">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <div class="page-title__button button"><a class="page-title__button--text center" href="">НАЙТИ гостиницу</a></div>
       </section>
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105198.13582390833!2d-111.85923215458536!3d34.85380474635181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2s!4v1653303623615!5m2!1sru!2s" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </main>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105198.13582390833!2d-111.85923215458536!3d34.85380474635181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2s!4v1653303623615!5m2!1sru!2s" width="320" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
 
     <footer class="footer">
         <p class="footer__text">
@@ -117,5 +130,26 @@
           </svg></a>
         </div>
     </footer>
+    <script>
+      var nav = document.querySelector('.nav__list');
+      var headerToggle = document.querySelector('.header__bottom--toggle');
+      var navClose = document.querySelector('.nav__bottom--close');
+
+      headerToggle.addEventListener('click', function() {
+        if (nav.classList.contains('nav--closed')) {
+          nav.classList.remove('nav--closed');
+          nav.classList.add('nav--opened');
+        } else {
+          nav.classList.add('nav--closed');
+          nav.classList.remove('nav--opened');
+        }
+      });
+      navClose.addEventListener('click', function() {
+        if (nav.classList.contains('nav--opened')) {
+          nav.classList.remove('nav--opened');
+          nav.classList.add('nav--closed');
+        }
+      });
+    </script>
   </body>
 </html>

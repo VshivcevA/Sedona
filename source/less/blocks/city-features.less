@@ -1,21 +1,76 @@
 .city-features {
+  position: relative;
   &__list {
     list-style: none;
     margin: 0;
     padding: 0;
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 586px 256px 256px;
+    }
+  }
+  &__point {
+    padding-bottom: 30px;
+    text-transform: uppercase;
+
+    &-title {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    &-number {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &-text {
+      padding-top: 5px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 14px;
+      line-height: 18px;
+
+    }
   }
   &__item {
     text-align: center;
-    background-color: @blue;
     color: @white;
+    position: relative;
+    //padding-bottom: 45px;
+    height: min-content;
+    background-color: @blue;
+    &:first-child {
+      background-image:  url("../../img/icon/intro-triangle-bottom.svg");
+      background-repeat: no-repeat;
+      padding-top: 68px;
+    }
+    &:not(:first-child) {
+      padding-top: 39px;
+    }
     &:nth-child(n+3) {
       background-color: @lightgrey;
       color: @black;
+      padding-top: 7px;
+      padding-bottom: -11px;
+      border-bottom: 1px solid #D6D6D6;
+      box-sizing: border-box;
     }
-  }
-  &__point-title {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 26px;
+    &-img {
+      min-height: 260px;
+    }
+    @media (min-width: @tablet-width) {
+      &:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 256px 330px;
+      }
+      &:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+      }
+    }
   }
 }

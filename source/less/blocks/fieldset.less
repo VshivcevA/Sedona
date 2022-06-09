@@ -39,4 +39,21 @@
     line-height: 26px;
     box-sizing: border-box;
   }
+  @media (min-width: @tablet-width) {
+    &.impression {
+      order: -1;
+    }
+    &.person-contact {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+    &.attraction {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+    &--feeling {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+  }
 }
