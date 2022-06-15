@@ -1,21 +1,33 @@
 .page-title {
   text-align: center;
   text-transform: uppercase;
+  padding: 0 20px 0 20px;
   &__title {
     position: relative;
     font-weight: 700;
     font-size: 18px;
     line-height: 26px;
-    padding: 17px 20px;
+    padding: 38px 0 0;
+    margin: 0;
+
     &--search {
       font-size: 21px;
       padding-bottom: 0;
     }
   }
+  &--search {
+    @media (min-width: @tablet-width) {
+      width: 458px;
+      margin: 0 auto;
+    }
+  }
   &__text {
     font-size: 14px;
     line-height: 24px;
-    padding: 0 30px;
+    padding-top: 28px;
+    padding-bottom: 16px;
+    margin: 0;
+
     &--search {
       line-height: 22px;
       padding-bottom: 0;
@@ -25,10 +37,23 @@
     position: relative;
     background-color: @blue;
     color: @white;
-    width: 90%;
+    width: 280px;
     margin: 0 auto;
     margin-bottom: 49px;
     min-height: 58px;
+    border: none;
+    &:hover {
+      background-color: @blue-hover;
+    }
+    &:active {
+      background-color: @blue-activ;
+      & a {
+        opacity: 30%;
+      }
+    }
+    @media (min-width: @tablet-width) {
+      width: 100%;
+    }
     &--text {
       font-weight: 700;
       font-size: 21px;

@@ -1,8 +1,46 @@
 .photo-card {
+  position: relative;
+
+  &__item {
+    padding: 11px 20px;
+
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.3);
+      bottom: 0;
+      width: 100%;
+      color: @white;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+  }
   &__title {
     font-weight: 700;
     font-size: 14px;
     line-height: 24px;
     text-transform: uppercase;
+  }
+  &__like {
+    padding-left: 37px;
+    position: relative;
+    @media (min-width: @desktop-width) {
+      right: 60px;
+      bottom: 25px;
+      position: absolute;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      width: 23px;
+      height: 21px;
+      background-image: url("../../img/icon/like-icon.svg");
+      left: 0;
+      bottom: 3px;
+      @media (min-width: @desktop-width) {
+        background-image: url("../../img/icon/like-icon-desktop.svg");
+      }
+    }
   }
 }

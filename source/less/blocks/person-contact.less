@@ -1,0 +1,24 @@
+.person-contact {
+  margin-bottom: 12px;
+  &__title {
+    position: relative;
+  }
+  &__title:after {
+    position: absolute;
+    content: "";
+    width: 58px;
+    height: 58px;
+    background-color: @grey-hover;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 0;
+    bottom: 16px;
+  }
+  &__title:nth-child(1):after {
+    background-image: url("../../img/icon/icon-phone.svg");
+  //  какой-то прикол
+  }
+  &__title:nth-child(2):after {
+    background-image: url("../../img/icon/icon-mail.svg");
+  }
+}

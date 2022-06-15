@@ -1,9 +1,8 @@
 .nav {
   padding-bottom: 55px;
-
   @media (min-width: @tablet-width) {
+    padding-bottom: 0;
   }
-
   &__list {
     list-style: none;
     margin: 0;
@@ -16,7 +15,6 @@
       &.nav--closed {
         display: none;
       }
-
       &.nav--opened  {
         content: "";
         position: relative;
@@ -30,16 +28,41 @@
     font-size: 18px;
     line-height: 40px;
     text-transform: uppercase;
-    //box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background-color: @blue;
+    @media (max-width: @mobile-width-only) {
+      &:hover {
+        background-color: @blue-hover;
+      }
+      &:active {
+        background-color: @blue-activ;
+        & a {
+          opacity: 30%;
+        }
+      }
+    }
+
 
     //@media (min-width: @tablet-width) {
     //  //box-shadow: none;
     //}
-    &:not(:last-child) {
-      border-bottom: 1px solid #678fa8;
+    @media (max-width: @mobile-width-only) {
+      &:not(:last-child) {
+        border-bottom: 1px solid #678fa8;
+      }
+      &:not(:first-child) {
+        border-top: 1px solid #9ac2db;
+      }
     }
-    &:not(:first-child) {
-    border-top: 1px solid #9ac2db;
+    @media (min-width: @tablet-width) {
+      background-color: @white;
+      color: @black;
+      border: none;
+      &:nth-child(4n-2) {
+        margin-right: 20%;
+      }
     }
   }
   &__link {
@@ -47,8 +70,9 @@
     color: @white;
     display: flex;
     justify-content: center;
-    padding-top: 10px;
-    //padding-bottom: 5px;
+    //min-height: 55px;
+    //background-color: @blue;
+    border: none;
 
     @media (min-width: @tablet-width) {
       background-color: @white;

@@ -8,25 +8,34 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <div class="header__container">
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item button"><a class="nav__link" href="index.html" >Главная</a></li>
-            <li class="nav__item button"><a class="nav__link" href="catalog.html" >Фото и видео</a></li>
-            <li class="nav__item button"><a class="nav__link" href="form.html" >Форма Отзыва</a></li>
-            <li class="nav__item button"><a class="nav__link" href="" >HTML ACADEMY</a></li>
-          </ul>
-        </nav>
-        <button class="nav__close"><span>Закрыть меню</span></button>
-        <button class="header__toggle"><span>Меню</span></button>
+      <nav class="nav">
+        <ul class="nav__list nav--opened">
+          <li class="nav__item"><a class="nav__link" href="index.html" >Главная</a></li>
+          <li class="nav__item"><a class="nav__link" href="catalog.html" >Фото и видео</a></li>
+          <li class="nav__item"><a class="nav__link" href="form.html" >Форма Отзыва</a></li>
+          <li class="nav__item"><a class="nav__link" href="" >HTML ACADEMY</a></li>
+        </ul>
+        <a class="nav__bottom--close">
+          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z" fill="white"/>
+          </svg>
+        </a>
         <a class="header__logo" href="">
           <img alt="" src="img/svg/logotype-mobile.svg">
         </a>
-      </div>
+        <a class="header__bottom--toggle">
+          <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2"/>
+            <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2"/>
+            <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2"/>
+          </svg>
+        </a>
+      </nav>
       <div class="intro">
-        <img class="intro__container" src="img/jpg/intro-content.svg" alt="">
+        <img class="intro__container" src="img/svg/intro-sedona.svg" alt="">
       </div>
     </header>
+
 
     <main class="main page-main">
       <h1 class="visually-hidden">Sedona - туристический сайт. Страница отзыва</h1>
@@ -54,15 +63,15 @@
           </fieldset>
 
           <fieldset class="fieldset person-contact">
-            <legend class="fieldset__title fieldset__title--contact"><h2>Контактная информация:</h2></legend>
+            <h2 class="fieldset__title fieldset__title--contact person-contact__legend">Контактная информация:</h2>
             <ul class="fieldset__list person-contact__list">
               <li class="person-contact__title">
                 <label class="fieldset__label fieldset__label--contact" for="tel">Контактный телефон<sup>*</sup>:</label>
-                <input class="fieldset__input fieldset__input--contact" type="tel" id="tel" name="tel" placeholder="Введите телефон">
+                <input class="fieldset__input fieldset__input--contact person-contact__input person-contact__input-phone" type="tel" id="tel" name="tel" placeholder="Введите телефон">
               </li>
               <li class="person-contact__title">
                 <label class="fieldset__label fieldset__label--contact" for="email">Электронная почта<sup>*</sup>:</label>
-                <input class="fieldset__input fieldset__input--contact" type="text" id="email" name="email" placeholder="Введите e-mail">
+                <input class="fieldset__input fieldset__input--contact person-contact__input-mail" type="text" id="email" name="email" placeholder="Введите e-mail">
               </li>
             </ul>
           </fieldset>
@@ -100,7 +109,6 @@
                 </label>
               </li>
               <li class="attraction__item checkbox">
-
                 <label class="fieldset__label fieldset__label--attraction checkbox__label" for="MountBell">
                   <input class="fieldset__input fieldset__input--attraction checkbox__box checkbox__input" type="checkbox" id="MountBell" name="attraction" checked>
                   <span class="checkbox__box"></span>Гора-Колокол</label>
@@ -119,15 +127,13 @@
           </fieldset>
 
           <fieldset class="fieldset fieldset--feeling">
-            <h2 class="fieldset__title fieldset__title--feeling">
-              <label class="fieldset__title fieldset__title--feeling" for="feeling">Опишите свои эмоции:</label>
-            </h2>
+            <h2 class="fieldset__title fieldset__title--feeling">Опишите свои эмоции:</h2>
             <textarea class="fieldset__textarea fieldset__input--feeling" id="feeling" name="feeling" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
           <div class="page-title__button">
-            <input class="page-title__button--text button center" type="submit" value="ОТПРАВИТЬ ОТЗЫВ">
+            <input class="page-title__button page-title__button--text center" type="submit" value="ОТПРАВИТЬ ОТЗЫВ">
           </div>
-          <span>* — обязательные поля</span>
+          <span class="fieldset--note">* — обязательные поля</span>
         </form>
       </section>
     </main>

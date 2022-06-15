@@ -9,10 +9,7 @@
 
   &__list {
     list-style: none;
-    //margin: 0;
     padding: 0;
-
-
     @media (min-width: @tablet-width) {
       //padding: 0;
       display: grid;
@@ -22,12 +19,46 @@
     }
   }
   &__item {
+    position: relative;
     padding-right: 20px;
     padding-bottom: 25px;
     padding-left: 69px;
-    text-transform: uppercase ;
+    text-transform: uppercase;
     &:last-child {
       padding-bottom: 35px;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      left: 10px;
+      top: -5px;
+      width: 45px;
+      height: 55px;
+    }
+    &:nth-child(1):before {
+      background-image: url("../../img/icon/icon-house.svg");
+    }
+    &:nth-child(2):before {
+      background-image: url("../../img/icon/icon-burger.svg");
+    }
+    &:nth-child(3):before {
+      background-image: url("../../img/icon/icon-gift.svg");
+    }
+    @media (min-width: @tablet-width) {
+      padding-top: 158px;
+      padding-left: 32px;
+      padding-right: 32px;
+      text-align: center;
+
+      &:before {
+        left: calc(50% - 40px);
+        top: 20px;
+        width: 80px;
+        height: 100px;
+      }
     }
   }
   &__title {
