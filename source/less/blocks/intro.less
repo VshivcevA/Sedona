@@ -1,7 +1,7 @@
 .intro {
   background-image:
     url("../../img/icon/intro-triangle.svg"),
-    url("../../img/jpg/intro-bg.jpg");
+    url("../../img/jpg/back-mobile.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-position-x: 50%;
@@ -9,10 +9,25 @@
   background-size: 1200px 57px, cover;
   text-align: center;
   padding: 50px 0 63px;
-
+  @media (min-width: @tablet-width) {
+    padding: 70px 0 93px;
+  }
+  @media (min-width: @tablet-width) {
+    background-image:
+      url("../../img/icon/intro-triangle.svg"),
+      url("../../img/jpg/back-tablet.jpg");
+  }
+  @media (min-width: @desktop-width) {
+    background-image:
+      url("../../img/icon/intro-triangle.svg"),
+      url("../../img/jpg/back-desktop.jpg");
+  }
   &__container {
     height: min-content;
     width: 229px;
+    @media (min-width: @tablet-width) {
+      width: 457px;
+    }
   }
   &--index {
     padding: 90px 0 55px;

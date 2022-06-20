@@ -1,20 +1,19 @@
 .photo-card {
   position: relative;
-
   &__item {
     padding: 11px 20px;
-
+    background-color: @grey;
+    //width: 100%;
     @media (min-width: @desktop-width) {
       position: absolute;
       background: rgba(0, 0, 0, 0.3);
       bottom: 0;
       width: 100%;
       color: @white;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
     }
-
+  }
+  &__img {
+    width: 100%;
   }
   &__title {
     font-weight: 700;

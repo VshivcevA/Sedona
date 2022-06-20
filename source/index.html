@@ -5,7 +5,12 @@
     <title>HTML Academy: {{projectTitle}}</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
   </head>
+
   <body class="page__body">
     <header class="header">
       <nav class="nav">
@@ -21,7 +26,10 @@
           </svg>
         </a>
         <a class="header__logo" href="">
-          <img alt="" src="img/svg/logotype-mobile.svg">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/svg/logotype-desktop.svg">
+            <img alt="" src="img/svg/logotype-mobile.svg">
+          </picture>
         </a>
         <a class="header__bottom--toggle">
           <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,7 +40,7 @@
         </a>
       </nav>
       <div class="intro intro--index">
-        <img class="intro__container" src="img/jpg/intro-content.svg" width="282px" alt="">
+        <img class="intro__container" src="img/svg/intro_full.svg" alt="">
       </div>
     </header>
 
@@ -51,7 +59,11 @@
               <p class="city-features__point-number">— №1 —</p>
               <p class="city-features__point-text">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
             </div>
-            <img class="city-features__item-img" alt="" src="img/jpg/photo-city.jpg" width="320px" height="260">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/jpg/photo-city@1x_d.jpg">
+              <source media="(min-width: 768px)" srcset="img/jpg/photo-city@1x_t.jpg">
+              <img class="city-features__item-img" alt="" src="img/jpg/photo-city@1x_m.jpg">
+            </picture>
             <div class="features-advantage">
               <ul class="features-advantage__list">
                 <li class="features-advantage__item">
@@ -75,7 +87,11 @@
               <p class="city-features__point-number">— №2 —</p>
               <p class="city-features__point-text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img class="city-features__item-img" alt="" src="img/jpg/photo-bridge.jpg">
+            <picture class="city-features__item-img">
+              <source media="(min-width: 1200px)" srcset="img/jpg/photo-bridge@1x_d.jpg">
+              <source media="(min-width: 768px)" srcset="img/jpg/photo-bridge@1x_t.jpg">
+              <img class="city-features__item-img" alt="" src="img/jpg/photo-bridge@1x_m.jpg">
+            </picture>
           </li>
           <li class="city-features__item">
             <div class="city-features__item-text city-features__point">

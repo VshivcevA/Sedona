@@ -1,0 +1,54 @@
+.pop-up-fail {
+  background-color: @white;
+  position: fixed;
+  width: 320px;
+  min-height: 280px;
+  text-transform: uppercase;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  @media (min-width: @tablet-width) {
+    min-width: 400px;
+  }
+  &__item {
+    text-align: center;
+    margin: 40px 50px 130px 50px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 30px 0 30px;
+    @media (min-width: @tablet-width) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+  &__text {
+    //font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__button--ok {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    min-width: 180px;
+    min-height: 58px;
+    border: none;
+    background-color: @blue;
+    text-transform: uppercase;
+    color: @white;
+    margin: 0 70px 35px 70px;
+    position: absolute;
+    bottom: 0;
+    @media (min-width: @tablet-width) {
+      min-width: 272px;
+      font-size: 30px;
+      margin: 0 64px 49px 64px;
+      font-size: 21px;
+    }
+  }
+}
+

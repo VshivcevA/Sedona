@@ -5,36 +5,44 @@
     <title>HTML Academy: {{projectTitle}}</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
   </head>
-  <body class="page__body">
-    <header class="header">
-      <nav class="nav">
-        <ul class="nav__list nav--opened">
-          <li class="nav__item"><a class="nav__link" href="index.html" >Главная</a></li>
-          <li class="nav__item"><a class="nav__link" href="catalog.html" >Фото и видео</a></li>
-          <li class="nav__item"><a class="nav__link" href="form.html" >Форма Отзыва</a></li>
-          <li class="nav__item"><a class="nav__link" href="" >HTML ACADEMY</a></li>
-        </ul>
-        <a class="nav__bottom--close">
-          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z" fill="white"/>
-          </svg>
-        </a>
-        <a class="header__logo" href="">
-          <img alt="" src="img/svg/logotype-mobile.svg">
-        </a>
-        <a class="header__bottom--toggle">
-          <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2"/>
-            <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2"/>
-            <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2"/>
-          </svg>
-        </a>
-      </nav>
-      <div class="intro">
-        <img class="intro__container" src="img/svg/intro-sedona.svg" alt="">
-      </div>
-    </header>
+
+    <body class="page__body">
+      <header class="header">
+        <nav class="nav">
+          <ul class="nav__list nav--opened">
+            <li class="nav__item"><a class="nav__link" href="index.html" >Главная</a></li>
+            <li class="nav__item"><a class="nav__link" href="catalog.html" >Фото и видео</a></li>
+            <li class="nav__item"><a class="nav__link" href="form.html" >Форма Отзыва</a></li>
+            <li class="nav__item"><a class="nav__link" href="" >HTML ACADEMY</a></li>
+          </ul>
+          <a class="nav__bottom--close">
+            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z" fill="white"/>
+            </svg>
+          </a>
+          <a class="header__logo" href="">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/svg/logotype-desktop.svg">
+              <img alt="" src="img/svg/logotype-mobile.svg">
+            </picture>
+          </a>
+          <a class="header__bottom--toggle">
+            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2"/>
+              <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2"/>
+              <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2"/>
+            </svg>
+          </a>
+        </nav>
+        <div class="intro">
+          <img class="intro__container" src="img/svg/intro-sedona.svg" alt="">
+        </div>
+      </header>
 
 
     <main class="main page-main">
@@ -160,6 +168,30 @@
         </svg></a>
       </div>
     </footer>
+      <section class="pop-up-fail visually-hidden">
+        <div class="pop-up-fail__item">
+          <p class="pop-up-fail__title">
+            ЧТО-ТО ПОШЛО НЕ ТАК!
+          </p>
+          <p class="pop-up-fail__text">
+            Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+          </p>
+        </div>
+        <button class="pop-up-fail__button--ok">ok</button>
+      </section>
+      <section class="pop-up-succes visually-hidden">
+        <div class="pop-up-succes__item">
+          <p class="pop-up-succes__title">
+            Ваш отзыв отправлен!
+          </p>
+          <p class="pop-up-succes__text">
+            Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее время мы опубликуем его на сайте.
+          </p>
+        </div>
+        <div class="pop-up-succes__button">
+          <button class="pop-up-succes__button--ok">ЗАКРЫТЬ ОКНО</button>
+        </div>
+      </section>
   </body>
 </html>
 

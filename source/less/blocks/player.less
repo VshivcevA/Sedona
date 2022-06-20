@@ -1,12 +1,23 @@
 .player {
-  background-image: url("../../img/jpg/video-mobile.jpg");
-  height: 201px  ;
+  background-image: url("../../img/jpg/catalog/video_m.jpg");
+  min-height: 201px;
   position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/jpg/catalog/video_t.jpg");
+    min-height: 500px;
+  }
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/jpg/catalog/video_d.jpg");
+  }
   .player__range {
+    display: none;
     position: absolute;
     bottom: 0;
     box-sizing: border-box;
     width: 100%;
+    max-width: 800px;
     height: 45px;
     background-color: @blue;
   }

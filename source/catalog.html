@@ -5,7 +5,12 @@
     <title>HTML Academy: {{projectTitle}}</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
   </head>
+
    <body class="page__body">
     <header class="header">
       <nav class="nav">
@@ -21,7 +26,10 @@
           </svg>
         </a>
         <a class="header__logo" href="">
-          <img alt="" src="img/svg/logotype-mobile.svg">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/svg/logotype-desktop.svg">
+            <img alt="" src="img/svg/logotype-mobile.svg">
+          </picture>
         </a>
         <a class="header__bottom--toggle">
           <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +54,11 @@
       <section class="photo">
         <ul class="photo__list">
           <li class="photo__item photo-card">
-            <img src="img/jpg/photo-road.jpg" alt="Дорога на закате">
+            <picture class="photo-card__img">
+              <source media="(min-width: 1200px)" srcset="img/jpg/catalog/photo-road_d.jpg">
+              <source media="(min-width: 768px)" srcset="img/jpg/catalog/photo-road_t.jpg">
+              <img src="img/jpg/catalog/photo-road_m.jpg" alt="Дорога на закате">
+            </picture>
             <div class="photo-card__item">
               <h3 class="photo-card__title">Неродные просторы</h3>
               <p class="photo-card__text">Автор фото: Борис</p>
@@ -54,7 +66,11 @@
             </div>
           </li>
           <li class="photo__item photo-card">
-            <img src="img/jpg/photo-fauna.jpg" alt="Фауна Седоны">
+            <picture class="photo-card__img">
+              <source media="(min-width: 1200px)" srcset="img/jpg/catalog/photo-fauna_d.jpg">
+              <source media="(min-width: 768px)" srcset="img/jpg/catalog/photo-fauna_t.jpg">
+              <img src="img/jpg/catalog/photo-fauna_m.jpg" alt="Дорога на закате">
+            </picture>
             <div class="photo-card__item">
               <h3 class="photo-card__title">Местная растительность</h3>
               <p class="photo-card__text">Автор фото: Сергей</p>
@@ -62,7 +78,11 @@
             </div>
           </li>
           <li class="photo__item photo-card">
-            <img src="img/jpg/photo-nord-road.jpg" alt="Дорога на север">
+            <picture class="photo-card__img">
+              <source media="(min-width: 1200px)" srcset="img/jpg/catalog/photo-nord-road_d.jpg">
+              <source media="(min-width: 768px)" srcset="img/jpg/catalog/photo-nord-road_t.jpg">
+              <img src="img/jpg/catalog/photo-nord-road_m.jpg" alt="Дорога на закате">
+            </picture>
             <div class="photo-card__item">
               <h3 class="photo-card__title">Дорога на север</h3>
               <p class="photo-card__text">Автор фото: Петр</p>
@@ -70,7 +90,11 @@
             </div>
           </li>
           <li class="photo__item photo-card">
-            <img src="img/jpg/photo-bridge.jpg" alt="Мост дьявола">
+            <picture class="photo-card__img">
+              <source media="(min-width: 1200px)" srcset="img/jpg/catalog/photo-bridge_d.jpg">
+              <source media="(min-width: 768px)" srcset="img/jpg/catalog/photo-bridge_t.jpg">
+              <img src="img/jpg/catalog/photo-bridge_m.jpg" alt="Дорога на закате">
+            </picture>
             <div class="photo-card__item">
               <h3 class="photo-card__title">Мост дьявола</h3>
               <p class="photo-card__text">Автор фото: Антон</p>
@@ -88,10 +112,7 @@
         </div>
         <div class="player">
           <div class="player__range main">
-
-
           </div>
-
         </div>
       </section>
 

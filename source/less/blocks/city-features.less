@@ -11,17 +11,22 @@
     }
   }
   &__point {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: center;
+    height: 100%;
     padding-bottom: 30px;
     text-transform: uppercase;
     padding-top: 39px;
     @media (min-width: @tablet-width) {
-      padding-right: 32px;
-      padding-left: 32px;
+      padding: 0 32px;
     }
-    //min-height: 191px;
+    @media (min-width: @desktop-width) {
+      padding: 0 62px;
+    }
 
     &-title {
-      //padding-top: 39px;
       font-size: 18px;
       line-height: 26px;
     }
@@ -30,9 +35,6 @@
       line-height: 18px;
     }
     &-text {
-      padding-top: 5px;
-      padding-left: 20px;
-      padding-right: 20px;
       font-size: 14px;
       line-height: 18px;
 
@@ -42,35 +44,29 @@
     text-align: center;
     color: @white;
     position: relative;
-    //padding-bottom: 45px;
-    height: min-content;
     background-color: @blue;
-
+    @media (min-width: @tablet-width) {
+      border: none;
+      min-height: 256px;
+    }
     @media (max-width: @mobile-width-only) {
       &:first-child {
         background-image:  url("../../img/icon/intro-triangle-bottom.svg");
         background-repeat: no-repeat;
         background-size: 768px 37px;
         background-position-x: 50%;
-        padding-top: 30px;
-
       }
-
-    }
-    &:not(:first-child) {
-      //padding-top: 39px;
     }
     &:nth-child(n+3) {
       background-color: @lightgrey;
       color: @black;
-      padding-top: 0;
-      padding-bottom: 0;
       border-bottom: 1px solid #D6D6D6;
       box-sizing: border-box;
+
     }
     &-img {
       height: 260px;
-      width: 100%;
+      //width: 100%;
 
     }
     @media (min-width: @tablet-width) {
