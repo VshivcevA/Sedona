@@ -1,2 +1,2 @@
 # sedona
-htmlacademy
+Учебный проект HTML Academy на HTML/CSS адаптивный
