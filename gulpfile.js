@@ -159,7 +159,7 @@ const watcher = () => {
 
 // public
 
-const public = gulp.series(
+const build = gulp.series(
   clean,
   copy,
   optimizeImages,
@@ -172,7 +172,7 @@ const public = gulp.series(
   ),
 );
 
-exports.public = public;
+exports.build = build;
 
 // Default
 
