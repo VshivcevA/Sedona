@@ -43,6 +43,8 @@
     "source/js/**/*.js",
     "source/img/**/*.svg",
     "source/less/**/*.less"
-  ]
-
+  ],
+  "dependencies": {
+    "@vercel/analytics": "^0.1.6"
+  }
 }
