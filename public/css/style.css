@@ -46,7 +46,7 @@ img {
   position: relative;
 }
 .intro {
-  background-image: url("../../img/icon/intro-triangle.svg"), url("../../img/jpg/back-mobile.jpg");
+  background-image: url("../img/icon/intro-triangle.svg"), url("../img/jpg/back-mobile.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-position-x: 50%;
@@ -62,12 +62,12 @@ img {
 }
 @media (min-width: 768px) {
   .intro {
-    background-image: url("../../img/icon/intro-triangle.svg"), url("../../img/jpg/back-tablet.jpg");
+    background-image: url("../img/icon/intro-triangle.svg"), url("../img/jpg/back-tablet.jpg");
   }
 }
 @media (min-width: 1200px) {
   .intro {
-    background-image: url("../../img/icon/intro-triangle.svg"), url("../../img/jpg/back-desktop.jpg");
+    background-image: url("../img/icon/intro-triangle.svg"), url("../img/jpg/back-desktop.jpg");
   }
 }
 .intro__container {
