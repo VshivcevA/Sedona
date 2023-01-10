@@ -24,13 +24,13 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer(),
     ]))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("public/css"))
     .pipe(postcss([
       csso()
     ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("public/css"))
     .pipe(sync.stream());
 }
 
@@ -41,19 +41,19 @@ exports.styles = styles;
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("public"));
 }
 
 // Scripts
 
 const scripts = () => {
   return gulp.src("source/js/*.js")
-    .pipe(gulp.dest("build/js"))
+    .pipe(gulp.dest("public/js"))
     .pipe(terser())
     .pipe(rename({
       suffix: ".min"
     }))
-    .pipe(gulp.dest("build/js"))
+    .pipe(gulp.dest("public/js"))
     .pipe(sync.stream());
 }
 
@@ -68,14 +68,14 @@ const optimizeImages = () => {
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("public/img"))
 }
 
 exports.images = optimizeImages;
 
 const copyImages = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("public/img"))
 }
 
 exports.images = copyImages;
@@ -85,7 +85,7 @@ exports.images = copyImages;
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("public/img"))
 }
 
 exports.createWebp = createWebp;
@@ -98,7 +98,7 @@ const sprite = () => {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("public/img"));
 }
 
 exports.sprite = sprite;
@@ -114,7 +114,7 @@ const copy = (done) => {
   ], {
     base: "source"
   })
-    .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("public"))
   done();
 }
 
@@ -123,7 +123,7 @@ exports.copy = copy;
 // Clean
 
 const clean = () => {
-  return del("build");
+  return del("public");
 };
 
 // Server
@@ -131,7 +131,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: 'public'
     },
     cors: true,
     notify: false,
@@ -157,9 +157,9 @@ const watcher = () => {
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
-// Build
+// public
 
-const build = gulp.series(
+const public = gulp.series(
   clean,
   copy,
   optimizeImages,
@@ -172,7 +172,7 @@ const build = gulp.series(
   ),
 );
 
-exports.build = build;
+exports.public = public;
 
 // Default
 
