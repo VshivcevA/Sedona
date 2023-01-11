@@ -5,23 +5,21 @@
     padding: 11px 20px;
     background-color: @grey;
     width: 100%;
-    width: -moz-available;
-    width: available;
     box-sizing: border-box;
     @media (min-width: @desktop-width) {
       position: absolute;
       background: rgba(0, 0, 0, 0.3);
       bottom: 5px;
-      width: 100%;
       color: @white;
     }
   }
   &__img {
     height: 100px;
     font-size: 0;
+    object-fit: cover;
     & img {
-      width: -moz-available;
-      width: available;
+      object-fit: cover;
+      width: 100%;
     }
   }
   &__title {

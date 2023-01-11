@@ -293,8 +293,9 @@ img {
 }
 .city-features__item-img {
   height: 260px;
-  width: -moz-available;
-  width: available;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 768px) {
   .city-features__item:nth-child(1) {
@@ -745,8 +746,6 @@ img {
   padding: 11px 20px;
   background-color: #f2f2f2;
   width: 100%;
-  width: -moz-available;
-  width: available;
   box-sizing: border-box;
 }
 @media (min-width: 1200px) {
@@ -754,17 +753,19 @@ img {
     position: absolute;
     background: rgba(0, 0, 0, 0.3);
     bottom: 5px;
-    width: 100%;
     color: #fff;
   }
 }
 .photo-card__img {
   height: 100px;
   font-size: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .photo-card__img img {
-  width: -moz-available;
-  width: available;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 .photo-card__title {
   font-weight: 700;
